@@ -3,6 +3,8 @@
 
 <head>
     
+<link rel="stylesheet" href="style.css">
+
 <title>Accessible Form UI</title>
 
 </head>
@@ -12,23 +14,43 @@
 
 <section>
 
-<form>
+<form id="account-form">
 
-<label name="user-name">Full Name</label>
-<input type="text" id="user-name" name="user-name"><br>
+<label name="user-name">Full Name</label><br>
+<input type="text" id="user-name" name="user-name" placeholder="What shoud we call you?" required><br>
 
-<label name="user-email">E-mail</label>
-<input type="email" id="user-email" name="user-email"><br>
+<label class="form-invalid-label" name="user-email">E-mail</label><br>
+<input class="form-invalid-input" type="email" id="user-email" name="user-email" required><br>
+<p class="form-error">This e-mail is invalid</p>
 
-<label name="user-password">Enter Password</label>
-<input type="password" id="user-password" name="user-password"><br>
+<label name="user-password">Enter Password</label><br>
+<input type="password" id="user-password" name="user-password" placeholder="********" required><br>
 
-<label name="user-confirm-password">Confirm Password</label>
-<input type="password" id="user-confirm-password" name="user-confirm-password"><br>
+<label name="user-confirm-password">Confirm Password</label><br>
+<input type="password" id="user-confirm-password" name="user-confirm-password" placeholder="********" required><br>
 
-<input type="submit" value="Update Profile">
+<input type="submit" class="submit-button" value="Update Profile">
 
 </form>
+
+
+<aside id="account-status">
+
+<article>
+
+<header><h2>Profile Completeness</h2></header>
+
+<ul id="task-list">
+    <li class="task-completed">Create Account</li>
+    <li class="task-completed">Update Roadmap Progress</li>
+    <li class="task-completed">Setup Public Profile</li>
+    <li>Complete Your First Project</li>
+    <li>Invite Your Friends</li>
+</ul>
+
+</article>
+
+</aside>
 
 </section>
 

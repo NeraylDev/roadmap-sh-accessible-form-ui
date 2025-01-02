@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    font-family: 'Rubik';
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+section {
+    max-width: 50%;
+    margin: 64px auto;
+    padding: 64px;
+
+    display: grid;
+    grid-template-columns: 55% 45%;
+
+    border: 1px solid black;
+    border-radius: 16px;
+}
+
+input {
+    width: 80%;
+    margin: 6px 0 12px;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.form-error {
+    margin: -6px 0 12px;
+    font-size: small;
+    color: red;
+}
+
+.form-invalid-label {
+    color: red;
+}
+
+.form-invalid-input {
+    border-color: red;
+}
+
+.submit-button {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    margin: 32px 0;
+
+    transition: 0.2s;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    color: lightgray;
+}
+
+.task-completed {
+    color: gray;
+    text-decoration-line: line-through;
+    text-decoration-color: black;
+}
+
+#task-list {
+    background-color: lightgray;
+    padding: 32px;
+    line-height: 24px;
+    border-radius: 12px;
+}
