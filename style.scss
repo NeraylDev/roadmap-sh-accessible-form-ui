@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+$primaryColor: white;
+$secondaryColor: black;
+$tertiaryColor: lightgray;
+$errorColor: red;
+
+$primaryFont: 'Rubik', 'sans-serif';
+
+@mixin border($color, $radius, $thickness: 0.0625em){
+    border: $thickness solid $color;
+    border-radius: $radius;
+}
+
+
+* {
+    font-family: $primaryFont;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+
+section {
+    max-width: 50%;
+    margin: 4em auto;
+    padding: 4em;
+
+    display: grid;
+    grid-template-columns: 55% 45%;
+
+    @include border($secondaryColor, 1em);
+}
+
+input {
+    width: 80%;
+    margin: 0.375em 0 0.75em;
+    padding: 0.75em;
+
+    @include border($secondaryColor, 0.375em);
+}
+
+
+.form-error {
+    margin: -0.375em 0 0.75em;
+    font-size: small;
+    color: $errorColor;
+}
+
+.form-invalid-label {
+    color: $errorColor;
+}
+
+.form-invalid-input {
+    border-color: $errorColor;
+}
+
+
+.submit-button {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    font-weight: bold;
+    margin: 2em 0;
+
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        color: $tertiaryColor;
+    }
+}
+
+
+#progress-bar {
+    width: 6em;
+    height: 6em;
+    rotate: 45deg;
+
+    @include border($secondaryColor, 50%, 0.75em);
+    border-right-color: transparent;
+}
+
+#task-list {
+    background-color: $tertiaryColor;
+    padding: 2em;
+    line-height: 1.5em;
+    border-radius: 0.75em;
+}
+
+.task-completed {
+    color: gray;
+    text-decoration-line: line-through;
+    text-decoration-color: $secondaryColor;
+}
